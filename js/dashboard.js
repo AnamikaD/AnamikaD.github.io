@@ -321,7 +321,7 @@ function init_4(){
 			color: function(d){
 				return '#800000';
 			},      
-                        type: 'spline'
+                        type: 'bar'
                 },
                 axis: {
                         x: {

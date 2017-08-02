@@ -242,7 +242,7 @@ function init_2(){
 				color: function(d){
 					return '#FF8C00';
 				},
-				type: 'line'
+				type: 'spline'
 			},
 			axis: {
 				x: {

@@ -4,10 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.File;
-import java.io.*;
 import java.io.FileWriter;
-import java.lang.*;
-import java.util.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -17,7 +14,7 @@ import org.json.simple.parser.ParseException;
  * @author Crunchify.com
  */
  
-public class sg_members {
+public class CrunchifyJSONFileWrite {
  
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws 
@@ -28,7 +25,7 @@ public class sg_members {
 		
 		JSONObject obj = new JSONObject();
 
-		File folder = new File("/home/ubuntu/Downloads/sg-events/data_mem/");
+		File folder = new File("/home/ubuntu/sg-events/data");
 		File[] listOfFiles = folder.listFiles();
 		
 		for (int i=0; i < listOfFiles.length; i++) {
@@ -36,27 +33,30 @@ public class sg_members {
 				System.out.println("Directory: " + listOfFiles[i].getName());
 			JSONObject name_count = new JSONObject();
                         JSONParser parser = new JSONParser();
-			File f = new File("/home/ubuntu/Downloads/sg-events/data_mem/" + listOfFiles[i].getName() + "/data.txt");
+			File f = new File("/home/ubuntu/sg-events/data/" + listOfFiles[i].getName() + "/data.json");
 			if (f.exists()) {
+	                	JSONArray a = (JSONArray) parser.parse(new FileReader(
+        	        	"/home/ubuntu/sg-events/data/" + listOfFiles[i].getName() + "/data.json"));
 				int count = 0;
-				FileReader fr = new FileReader(f);
-	                        BufferedReader br = new BufferedReader(fr);
-				String line;
-				while((line = br.readLine()) != null){
-					if(line.contains("name")){
-						System.out.println("hello" + line);
-						count++;
-					}
-				}
+        	        	for (Object o : a)
+                		{
+                        		JSONObject person = (JSONObject) o;
+                        		count++;
+                		}
                 		System.out.println("The count is " + count);
-				name_count.put("Members", count);	
+				name_count.put("Event", count);	
 				name_count.put("Name", listOfFiles[i].getName());
 				single_event.add(name_count);
+			}
+			else {
+				name_count.put("Event", 0);
+                                name_count.put("Name", listOfFiles[i].getName());
+                                single_event.add(name_count);
 			}
 
 			}
 		}
-		try (FileWriter file = new FileWriter("/home/ubuntu/AnamikaD.github.io/data/sg_members.json")) {
+		try (FileWriter file = new FileWriter("/home/ubuntu/Documents/single_event.json")) {
 			file.write(single_event.toJSONString());
 		} 
 				 

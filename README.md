@@ -13,11 +13,22 @@ For Publish in Excel Sheet, type in terminal:
 ```
   export SHEET_ID="Excel Sheet ID"
 ```
-The Event Details are [published]((https://mozillascience.github.io/studyGroupEvents/) with the help of this Excel Sheet.
+The Event Details are [published](https://mozillascience.github.io/studyGroupEvents/) with the help of this Excel Sheet.
 
 3) After fetching the [data](https://github.com/auremoser/sg-events/tree/master/data), run the [Java Codes](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code) to fetch various Data in JSON format.
 
-4) The [JSON](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/data) fetched by Javascript [file](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/js) and displayed on the [Dashboard](https://anamikad.github.io/). (Visualisation : c3.js)  
+4) The [JSON](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/data) fetched by Javascript [file](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/js) and displayed on the [Dashboard](https://anamikad.github.io/). (Visualisation : c3.js) 
+
+5) The fetch and Publication of Data are done by running the [scripts](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/scripts) once in a week with the help of cront job.
+
+6) To run the Mozilla Study Group Dashboard or Mozilla Study Group Events Locally:
+```
+$ git clone reository
+$ jekyll build
+$ jekyll serve
+```
+### Come Join Us!
+I would like to thank [Aurelia](https://github.com/auremoser) for her guidance and support! <3 Also, Kuddos to [Hassen](https://github.com/HassenPy) and [Rahul Krishna](https://github.com/rahulkrishnan98) for their contribution and feedback! For any issues, you can drop a message on [gitter](https://gitter.im/mozillascience/studyGroup) or contact [me](https://gitter.im/AnamikaD).
 
 ### Relevant Links
 
@@ -33,3 +44,4 @@ The Event Details are [published]((https://mozillascience.github.io/studyGroupEv
 - [Cront job scripts](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/scripts) : Automate the fetching and pushing of data.
 - [Code to fetch Data](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code) : These codes fetches data across Study Group.
 - [GSoC github Repository](https://github.com/mozillascience/studyGroup-GSOC/) : Contains Roadmap and issues for GSoC 2017
+- [Mozilla Study Group](https://github.com/mozillascience/studyGroup) : Repository to Create your own Study Group.

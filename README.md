@@ -4,6 +4,10 @@ The [Mozilla Science Lab](https://science.mozilla.org/) is a part of the Mozilla
 
 The [Dashboard](https://anamikad.github.io/) has visualizations about [Study Group](https://github.com/mozillascience/studyGroup) globally. The Event details have been added to the [Mozilla Study Group Event](https://mozillascience.github.io/studyGroupEvents/) so that members can participate in various events.
 
+### What did I do?
+
+There are various data of study group like events, members, location and lessons. These data are scattered. Hence, to know the study group activities, I have collected data from everywhere and converted them into JSON. This JSON format is used to display Visualisation on the Dashboard. Also, I have modified the UI and added event details to Mozilla Study Group Events. Previously, sg-event script fetched only in JSON format. With the help of our contributor Hassen, we can now publish on the excel sheet and the data are displayed on Study Group Events. I have also written a script to fetch member details in plain Text format. After fetching, we use JAVA code to simplify the data into JSON format. These JSON are used in Visualisation. For Automation, We have created scripts to run it once in a week.
+
 ### Work Flow
  
 The fetching and publication of Data are done by running the [scripts](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/scripts) once in a week with the help of cron job.

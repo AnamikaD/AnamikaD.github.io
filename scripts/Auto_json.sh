@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/Documents 
+cd ../code 
 javac CrunchifyJSONFileWrite.java
 java CrunchifyJSONFileWrite
 javac Lessons_graph.java

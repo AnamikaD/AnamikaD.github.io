@@ -4,11 +4,19 @@ The [Mozilla Science Lab](https://science.mozilla.org/) is a part of the Mozilla
 
 The [Dashboard](https://anamikad.github.io/) has visualizations about [Study Group](https://github.com/mozillascience/studyGroup) globally. The Event detailshave been added to the [Mozilla Study Group Event](https://mozillascience.github.io/studyGroupEvents/) has Event Details so that members can participate in various events.
 
-### Work Flow 
+### Work Flow
+ 
+The fetching and publication of Data are done by running the [scripts](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/scripts) once in a week with the help of cron job.
 
-1) Fetch the Study Group Events and Members with the help of [sg-event](https://github.com/auremoser/sg-events) and [sg-members](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code/sg-members) scripts. For running these scripts, refer the [event README](https://github.com/auremoser/sg-events/blob/master/README.md) and [members README]().
+Add the script in sequence:
+- [First script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_gen_1.sh) : To fetch study group events in JSON format.
+- [Second script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_gen_2.sh) : To fetch study group members in Plain TEXT format.  
+- [Third script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_json.sh) : To run the JAVA code to fetch location, number of events, lesson and members details to JSON format.
+- [Fourth script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_push.sh) : To push the data to the github. Due to ssh clone, this is passwordless login.
 
-2) The sg-event script will fetch the event details as well as publish the content in excel sheet.
+1) Fetch the Study Group Events and Members with the help of [sg-event](https://github.com/auremoser/sg-events) and [sg-members](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code/sg-members) scripts. For running these scripts, refer the [event README](https://github.com/auremoser/sg-events/blob/master/README.md) and [members README](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/code/sg-members/Instructions.md).
+
+2) The sg-event script will fetch the event details as well as publish the contents in excel sheet.
   - For publishing to excel sheet, type in terminal:
 ```
   export SHEET_ID="Excel Sheet ID"
@@ -19,9 +27,7 @@ The [Dashboard](https://anamikad.github.io/) has visualizations about [Study Gro
 
 4) The [JSON](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/data) fetched by Javascript [file](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/js) is displayed on the [Dashboard](https://anamikad.github.io/). (Visualisation : [c3.js](http://c3js.org/gettingstarted.html)) 
 
-5) The fetching and publication of Data are done by running the [scripts](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/scripts) once in a week with the help of cron job.
-
-6) To run the Mozilla Study Group Dashboard or Mozilla Study Group Events locally:
+5) To run the Mozilla Study Group Dashboard or Mozilla Study Group Events locally:
 ```
 $ git clone repository
 $ jekyll build

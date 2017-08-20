@@ -14,6 +14,7 @@ Add the script in sequence:
 - [Third script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_json.sh) : To run the JAVA code to fetch location, number of events, lesson and number of members in a study group to JSON format.
 - [Fourth script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_push.sh) : To push the data to the github. Due to ssh clone, this is passwordless login.
 
+Manual running of scripts:
 1) Fetch the Study Group Events and Members with the help of [sg-event](https://github.com/auremoser/sg-events) and [sg-members](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code/sg-members) scripts. For running these scripts, refer the [event README](https://github.com/auremoser/sg-events/blob/master/README.md) and [members README](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/code/sg-members/Instructions.md).
 
 2) The sg-event script will fetch the event details as well as publish the contents in excel sheet.

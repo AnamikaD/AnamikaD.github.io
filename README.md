@@ -2,7 +2,7 @@
 
 The [Mozilla Science Lab](https://science.mozilla.org/) is a part of the Mozilla Foundation devoted to supporting a global community of scientists who want to open source their research and their learning materials. The Study Group program is a part of that initiative, and centers around a simple website that leverages Jekyll blog software and Github issues to enable the creation of a website for peer-learning groups. These groups collaborate and come together for in-person workshops and events that teach scientific programming concepts, open science practice, and scripting languages. Study Group Leads fork the [Study Group Website Repository](https://github.com/mozillascience/studyGroup) and customize the attached website (gh-page) to run meetups [all over the world](https://science.mozilla.org/programs/studygroups). They organize regular events, skill shares, co-work and create community around open science.  
 
-The [Dashboard](https://anamikad.github.io/) has visualizations about [Study Group](https://github.com/mozillascience/studyGroup) globally. The Event detailshave been added to the [Mozilla Study Group Event](https://mozillascience.github.io/studyGroupEvents/) has Event Details so that members can participate in various events.
+The [Dashboard](https://anamikad.github.io/) has visualizations about [Study Group](https://github.com/mozillascience/studyGroup) globally. The Event details have been added to the [Mozilla Study Group Event](https://mozillascience.github.io/studyGroupEvents/) so that members can participate in various events.
 
 ### Work Flow
  

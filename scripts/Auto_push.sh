@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/AnamikaD.github.io 
+cd .. 
 curr_date=`date`
 git add -A
 git commit -m "Revised Data on $curr_date"

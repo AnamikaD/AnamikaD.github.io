@@ -11,7 +11,7 @@ The fetching and publication of Data are done by running the [scripts](https://g
 Add the script in sequence:
 - [First script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_gen_1.sh) : To fetch study group events in JSON format.
 - [Second script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_gen_2.sh) : To fetch study group members in Plain TEXT format.  
-- [Third script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_json.sh) : To run the JAVA code to fetch location, number of events, lesson and members details to JSON format.
+- [Third script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_json.sh) : To run the JAVA code to fetch location, number of events, lesson and number of members in a study group to JSON format.
 - [Fourth script](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/scripts/Auto_push.sh) : To push the data to the github. Due to ssh clone, this is passwordless login.
 
 1) Fetch the Study Group Events and Members with the help of [sg-event](https://github.com/auremoser/sg-events) and [sg-members](https://github.com/AnamikaD/AnamikaD.github.io/tree/master/code/sg-members) scripts. For running these scripts, refer the [event README](https://github.com/auremoser/sg-events/blob/master/README.md) and [members README](https://github.com/AnamikaD/AnamikaD.github.io/blob/master/code/sg-members/Instructions.md).
